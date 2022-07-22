@@ -3,6 +3,7 @@ from django.urls import path, include
 from .views import *
 from rest_framework.authtoken.views import obtain_auth_token
 urlpatterns = [
+    
     path('',home , name='home'),
      path('register/',register, name='register'),
       path('api/token/',obtain_auth_token, name='obtain-token'),

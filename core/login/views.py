@@ -9,9 +9,12 @@ from django.contrib.auth.models import User, auth
 def home(request):
     #message='a'
     return render(request, 'home.html')
+
+
 def login(request):
+     print("starting of login")
      if request.method== "POST" :
-        # print("request.Post=",request.POST)
+        print("request.Post=",request.POST)
         print('dest12')
         name=request.POST['name']
         password=request.POST['password']
@@ -231,6 +234,7 @@ def register(request):
     return render (request, "register.html") 
 '''
 def register(request):
+    '''
     print("it was hereff")
     if request.method== "POST" :
         print("request.Post=",request.POST)
@@ -258,4 +262,5 @@ def register(request):
         else:
            message="invalid"
             # messages.info(request,'invalid') 
+            '''
     return render (request, "register.html") 
